@@ -1,0 +1,35 @@
+version: "3"
+
+volumes:
+  static:
+  media:
+
+services:
+  onlineschool_online:
+    build:
+      context: .
+      dockerfile: compose/production/django/Dockerfile
+    image: onlineschool_online
+    container_name: onlineschool_online
+    working_dir: /app/OnlineSchool
+    volumes:
+      - static:/app/OnlineSchool/static
+      - media:/app/OnlineSchool/media
+    env_file:
+      - .envs/.production
+    ports:
+      - "8000:8000"
+    command: /start.sh
+
+  nginx:
+    build:
+      context: .
+      dockerfile: compose/production/nginx/Dockerfile
+    image: onlineschool_online_nginx
+    container_name: onlineschool_online_nginx
+    volumes:
+      - static:/apps/onlineschool_online/static
+      - media:/apps/onlineschool_online/media
+    ports:
+      - "80:80"
+      - "443:443"

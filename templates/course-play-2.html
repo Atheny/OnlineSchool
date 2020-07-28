@@ -1,0 +1,34 @@
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ video.name }} 在线播放</title>
+  <link rel="stylesheet" href="https://unpkg.com/video.js@7.6.6/dist/video-js.css">
+    <style>
+        #example-video {
+            top: 5%;
+            left: 15%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">{{ video.name }}</h1>
+
+    <video id=example-video width=1000 height=600 class="video-js vjs-default-skin" controls>
+    <source
+       src="{{ MEDIA_URL }}{{ video.url }}"
+       type="video/mp4">
+    </video>
+
+    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+    <script src="https://unpkg.com/videojs-flash/dist/videojs-flash.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+    <script>
+    var player = videojs('example-video');
+    player.play();
+    </script>
+
+</body>
+</html>

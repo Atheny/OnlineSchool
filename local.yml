@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  onlineschool_local:
+    build:
+      context: .
+      dockerfile: compose/local/Dockerfile
+    image: onlineschool_local
+    container_name: onlineschool_local
+    working_dir: /app/OnlineSchool
+    volumes:
+      - .:/app/OnlineSchool
+    env_file:
+      - .envs/.local
+    ports:
+      - "8000:8000"
+    command: /start.sh
