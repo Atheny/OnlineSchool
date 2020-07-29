@@ -1,8 +1,8 @@
 # Install the base requirements for the app.
 # This stage is to support development.
-FROM python:3.6-alpine
+FROM python:3.6
 ENV PYTHONUNBUFFERED 1
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && apk update \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && apk update \
   # Pillow dependencies
   && apk add --no-cache --virtual .pynacl_deps bash gcc jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev musl-dev python3-dev libffi-dev libressl-dev build-base
 
