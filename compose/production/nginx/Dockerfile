@@ -5,6 +5,6 @@ FROM nginx:1.17.1
 # 替换为国内源
 #RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak
 #COPY ./compose/production/nginx/sources.list /etc/apt/
-RUN apt-get update && apt-get install -y --allow-unauthenticated --assume-yes apt-utils certbot python-certbot-nginx
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && apt-get update && apt-get install -y --allow-unauthenticated --assume-yes apt-utils certbot python-certbot-nginx
 RUN rm /etc/nginx/conf.d/default.conf
 COPY ./compose/production/nginx/OnlineSchool.conf /etc/nginx/conf.d/OnlineSchool.conf

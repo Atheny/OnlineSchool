@@ -10,7 +10,6 @@ __pycache__/
 venv
 media
 static
-requirements.txt
 run.sh
 db.sqlite3
 
