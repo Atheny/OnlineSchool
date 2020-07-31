@@ -9,9 +9,14 @@ __pycache__/
 .envs
 venv
 media
-static
 run.sh
 db.sqlite3
+Python-3.6.8.tgz
+/static
+!*/static
+!*/*/static
+!*/*/*/static
+
 
 
 # C extensions
