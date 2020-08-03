@@ -30,6 +30,8 @@ services:
     volumes:
       - static:/apps/onlineschool_online/static
       - media:/apps/onlineschool_online/media
+    environment:
+      TZ: 'Asia/Shanghai'
     ports:
       - "80:80"
       - "443:443"
