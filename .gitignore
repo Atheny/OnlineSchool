@@ -17,6 +17,8 @@ Python-3.6.8.tgz
 !*/*/static
 !*/*/*/static
 
+*/*/*/1_atheny.xyz_bundle.crt
+*/*/*/2_atheny.xyz.key
 
 
 # C extensions
