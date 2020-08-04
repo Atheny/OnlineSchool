@@ -65,7 +65,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 RUN cp /usr/local/python3/bin/gunicorn /usr/local/bin/
 
-COPY . /app/OnlineSchool
+#COPY . /app/OnlineSchool
 
 COPY cp_to_docker/operations.py /usr/local/python3/lib/python3.6/site-packages/django/db/backends/mysql/operations.py
 COPY compose/production/django/start.sh /start.sh

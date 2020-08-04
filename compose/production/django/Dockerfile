@@ -12,9 +12,6 @@ MAINTAINER chenmiaomiao # 指定作者信息
 ADD Python-3.6.8.tgz /root/
 
 
-
-
-
 #安装
 RUN set -ex \
     # 预安装所需组件

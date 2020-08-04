@@ -1,2 +1,4 @@
-venv
+/venv
 fabfile.py
+/static
+/media
