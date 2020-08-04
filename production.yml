@@ -1,9 +1,5 @@
 version: "3"
 
-volumes:
-  static:
-  media:
-
 services:
   onlineschool_online:
     build:
@@ -13,8 +9,8 @@ services:
     container_name: onlineschool_online
     working_dir: /app/OnlineSchool
     volumes:
-      - static:/app/OnlineSchool/static
-      - media:/app/OnlineSchool/media
+      - /data/apps/OnlineSchool/static:/app/OnlineSchool/static
+      - /data/apps/OnlineSchool/media:/app/OnlineSchool/media
     env_file:
       - .envs/.production
     ports:
@@ -28,8 +24,8 @@ services:
     image: onlineschool_online_nginx
     container_name: onlineschool_online_nginx
     volumes:
-      - static:/apps/onlineschool_online/static
-      - media:/apps/onlineschool_online/media
+      - /data/apps/OnlineSchool/static:/apps/onlineschool_online/static
+      - /data/apps/OnlineSchool/media:/apps/onlineschool_online/media
     environment:
       TZ: 'Asia/Shanghai'
     ports:
