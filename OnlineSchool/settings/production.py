@@ -8,7 +8,7 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 DEBUG = False
 
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.atheny.xyz']
-ALLOWED_HOSTS = ['.atheny.xyz']
+ALLOWED_HOSTS = ['atheny.xyz', 'www.atheny.xyz']
 
 # 改为线上环境的MySQL数据库
 DATABASES = {
