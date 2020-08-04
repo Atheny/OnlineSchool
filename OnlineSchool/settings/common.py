@@ -42,9 +42,7 @@ INSTALLED_APPS = [
     'reversion',
     'pure_pagination',
     'captcha',
-
-
-
+    'django_cleanup.apps.CleanupConfig',
 
 ]
 
