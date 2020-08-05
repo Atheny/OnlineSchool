@@ -12,6 +12,7 @@ media
 run.sh
 db.sqlite3
 Python-3.6.8.tgz
+fabfile.py
 /static
 !*/static
 !*/*/static
