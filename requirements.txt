@@ -2,7 +2,7 @@ asgiref==3.2.10
 asn1crypto==1.4.0
 bcrypt==3.1.7
 cffi==1.14.0
-cryptography==3.0
+cryptography==3.2
 defusedxml==0.6.0
 diff-match-patch==20181111
 Django==2.2.9
