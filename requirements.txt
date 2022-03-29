@@ -26,7 +26,7 @@ jdcal==1.4.1
 MarkupPy==1.14
 odfpy==1.4.1
 openpyxl==3.0.4
-paramiko==2.7.1
+paramiko==2.10.1
 Pillow==7.2.0
 pycparser==2.20
 PyMySQL==0.10.0
